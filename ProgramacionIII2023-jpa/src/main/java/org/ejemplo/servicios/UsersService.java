@@ -27,7 +27,7 @@ public class UsersService {
 
     public void registrarUsuario(Usuario usuario) {
         userValidations.validateExistingUser(usuario.getUser());
-
+        userValidations.validateRole(usuario.getRole());
         usuarioRepository.save(usuario);
     }
 
